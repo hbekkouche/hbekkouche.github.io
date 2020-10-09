@@ -48,9 +48,16 @@
         main {
             min-height: 85vh;
         }
+        .card-body {
+            padding: .5rem;
+            min-height: 5em;
+        }
+        pre {
+            padding: 0.7rem;
+        }
     </style>
 </head><body><nav class="navbar navbar-expand-md fixed-top navbar-dark bg-danger">
-  <a class="navbar-brand" style="font-weight: 900" href="hbekkouche.github.io">HB</a>
+  <a class="navbar-brand" style="font-weight: 900" href="http://hbekkouche.github.io">HB</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -78,10 +85,8 @@
             <div class="col-md-6">
                 <h2>SSH Passwordless Login</h2>
                 <p>April 1, 2020</p>
-                <p>Introduction In this article, we will try to setup password-less login using ssh keys to connect to remote Linux servers without entering a password.
-open your preferred terminal and follow the steps:
-Generate Authentication Keys on local machine ssh-keygen -t rsa Create .ssh Directory on remote machine ssh &lt;user&gt;@&lt;remote-ip-adress&gt; mkdir -p .ssh Upload Generated Public Keys to remote machine cat .ssh/id_rsa.pub | ssh &lt;user&gt;@&lt;remote-ip-adress&gt; &#39;cat &gt;&gt; ~/.ssh/authorized_keys&#39; Login to remote machine ssh &lt;user&gt;@&lt;remote-ip-adress&gt; </p>
-                <p><a class="btn btn-secondary" href="hbekkouche.github.io/post/ssh-passwordless-login/" role="button">View details &raquo;</a></p>
+                <p>In this article, we will try to setup password-less login using ssh keys to connect to remote Linux servers without entering a password.</p>
+                <p><a class="btn btn-secondary" href="http://hbekkouche.github.io/post/ssh-passwordless-login/" role="button">Read more &raquo;</a></p>
             </div>
         </div>
         

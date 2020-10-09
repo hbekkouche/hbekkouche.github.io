@@ -3,57 +3,72 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>hbekkouche.github.io/tags/devops/</loc>
+    <loc>http://hbekkouche.github.io/post/add-open-in-vscode-to-context-menu-in-windows/</loc>
+    <lastmod>2020-10-09T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://hbekkouche.github.io/</loc>
+    <lastmod>2020-10-09T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://hbekkouche.github.io/tags/ide/</loc>
+    <lastmod>2020-10-09T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://hbekkouche.github.io/series/operations/</loc>
+    <lastmod>2020-10-09T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://hbekkouche.github.io/posts/</loc>
+    <lastmod>2020-10-09T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://hbekkouche.github.io/series/</loc>
+    <lastmod>2020-10-09T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://hbekkouche.github.io/tags/</loc>
+    <lastmod>2020-10-09T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://hbekkouche.github.io/tags/tools/</loc>
+    <lastmod>2020-10-09T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://hbekkouche.github.io/tags/devops/</loc>
     <lastmod>2020-04-01T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>hbekkouche.github.io/</loc>
+    <loc>http://hbekkouche.github.io/tags/operations/</loc>
     <lastmod>2020-04-01T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>hbekkouche.github.io/series/operations/</loc>
+    <loc>http://hbekkouche.github.io/tags/ssh/</loc>
     <lastmod>2020-04-01T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>hbekkouche.github.io/tags/operations/</loc>
+    <loc>http://hbekkouche.github.io/post/ssh-passwordless-login/</loc>
     <lastmod>2020-04-01T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>hbekkouche.github.io/posts/</loc>
-    <lastmod>2020-04-01T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>hbekkouche.github.io/series/</loc>
-    <lastmod>2020-04-01T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>hbekkouche.github.io/tags/ssh/</loc>
-    <lastmod>2020-04-01T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>hbekkouche.github.io/post/ssh-passwordless-login/</loc>
-    <lastmod>2020-04-01T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>hbekkouche.github.io/tags/</loc>
-    <lastmod>2020-04-01T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>hbekkouche.github.io/about/</loc>
+    <loc>http://hbekkouche.github.io/about/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>hbekkouche.github.io/categories/</loc>
+    <loc>http://hbekkouche.github.io/categories/</loc>
   </url>
   
 </urlset>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Hocine BEKKOUCHE">
+    <title>Add &#39;Open in VSCode&#39; to Context Menu in Windows - Hocine BEKKOUCHE</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courier+Prime|Do+Hyeon|Spicy+Rice&display=swap" rel="stylesheet">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+         
+        body {
+            padding-top: 3.5rem;
+            font-family: 'Catamaran', sans-serif;
+        }
+
+        .jumbotron {
+            font-family: 'Courier Prime', monospace;
+            border-radius:0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .jumbotron .lead {
+            margin-bottom: 5rem;
+        }
+
+        main {
+            min-height: 85vh;
+        }
+        .card-body {
+            padding: .5rem;
+            min-height: 5em;
+        }
+        pre {
+            padding: 0.7rem;
+        }
+    </style>
+</head><body><nav class="navbar navbar-expand-md fixed-top navbar-dark bg-danger">
+  <a class="navbar-brand" style="font-weight: 900" href="http://hbekkouche.github.io">HB</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav ml-md-auto">
+             
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Blog</a>
+        </li>
+             
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+      
+    </ul>
+  </div>
+</nav><main role="main" class="flex-shrink-0">
+        <div class="container">
+
+          <div class="jumbotron jumbotron-fluid dark-thumbnail" 
+          style="background-image: url('/images/02-vscode.jpg');background-color: #8d26d8">
+            <div class="container">
+              <p class="lead"></p>
+            </div>
+          </div>
+            <h1 class="display-4">Add &#39;Open in VSCode&#39; to Context Menu in Windows</h1>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#during-installation">During installation</a></li>
+    <li><a href="#after-installation">After installation</a></li>
+  </ul>
+</nav>
+            <h2 id="introduction">Introduction</h2>
+<p>In this article,
+we will try to add &lsquo;Open in VSCode&rsquo; to Context Menu in Windows.</p>
+<h2 id="during-installation">During installation</h2>
+<p>when you are installing vs code there is tow checkboxes you could select to make it open in the context menu.
+<img src="/images/02-vscode-02.png" alt="Example image"></p>
+<h2 id="after-installation">After installation</h2>
+<p>if you missed the configuration during installation the solution
+create a reg file with this content (Replace the paths if you have a custom installation):
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Windows Registry Editor Version 5.00
+; Open files
+<span style="color:#f92672">[</span>HKEY_CLASSES_ROOT<span style="color:#ae81ff">\*</span><span style="color:#ae81ff">\s</span>hell<span style="color:#ae81ff">\O</span>pen with VS Code<span style="color:#f92672">]</span>
+@<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Edit with VS Code&#34;</span>
+<span style="color:#e6db74">&#34;Icon&#34;</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;C:\\Program Files\\Microsoft VS Code\\Code.exe,0&#34;</span>
+<span style="color:#f92672">[</span>HKEY_CLASSES_ROOT<span style="color:#ae81ff">\*</span><span style="color:#ae81ff">\s</span>hell<span style="color:#ae81ff">\O</span>pen with VS Code<span style="color:#ae81ff">\c</span>ommand<span style="color:#f92672">]</span>
+@<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;\&#34;C:\\Program Files\\Microsoft VS Code\\Code.exe\&#34; \&#34;%1\&#34;&#34;</span>
+; This will make it appear when you right click ON a folder
+; The <span style="color:#e6db74">&#34;Icon&#34;</span> line can be removed <span style="color:#66d9ef">if</span> you don<span style="color:#e6db74">&#39;t want the icon to appear
+</span><span style="color:#e6db74">[HKEY_CLASSES_ROOT\Directory\shell\vscode]
+</span><span style="color:#e6db74">@=&#34;Open Folder as VS Code Project&#34;
+</span><span style="color:#e6db74">&#34;Icon&#34;=&#34;\&#34;C:\\Program Files\\Microsoft VS Code\\Code.exe\&#34;,0&#34;
+</span><span style="color:#e6db74">[HKEY_CLASSES_ROOT\Directory\shell\vscode\command]
+</span><span style="color:#e6db74">@=&#34;\&#34;C:\\Program Files\\Microsoft VS Code\\Code.exe\&#34; \&#34;%1\&#34;&#34;
+</span><span style="color:#e6db74">; This will make it appear when you right click INSIDE a folder
+</span><span style="color:#e6db74">; The &#34;Icon&#34; line can be removed if you don&#39;</span>t want the icon to appear
+<span style="color:#f92672">[</span>HKEY_CLASSES_ROOT<span style="color:#ae81ff">\D</span>irectory<span style="color:#ae81ff">\B</span>ackground<span style="color:#ae81ff">\s</span>hell<span style="color:#ae81ff">\v</span>scode<span style="color:#f92672">]</span>
+@<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Open Folder as VS Code Project&#34;</span>
+<span style="color:#e6db74">&#34;Icon&#34;</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;\&#34;C:\\Program Files\\Microsoft VS Code\\Code.exe\&#34;,0&#34;</span>
+<span style="color:#f92672">[</span>HKEY_CLASSES_ROOT<span style="color:#ae81ff">\D</span>irectory<span style="color:#ae81ff">\B</span>ackground<span style="color:#ae81ff">\s</span>hell<span style="color:#ae81ff">\v</span>scode<span style="color:#ae81ff">\c</span>ommand<span style="color:#f92672">]</span>
+@<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;\&#34;C:\\Program Files\\Microsoft VS Code\\Code.exe\&#34; \&#34;%V\&#34;&#34;</span></code></pre></div></p>
+<p>Double click it to create the registry entries</p>
+
+        </div>
+      </main><footer class="container">
+  <p>&copy; Hocine BEKKOUCHE 2020</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+<script>
+    feather.replace()
+</script></body>
+</html>
